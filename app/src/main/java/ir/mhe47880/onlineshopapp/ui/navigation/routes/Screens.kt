@@ -1,4 +1,4 @@
-package ir.mhe47880.onlineshopapp.ui.navigation.utils
+package ir.mhe47880.onlineshopapp.ui.navigation.routes
 
 import kotlinx.serialization.Serializable
 

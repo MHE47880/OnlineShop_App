@@ -1,4 +1,4 @@
-package ir.mhe47880.onlineshopapp.ui.navigation.screens
+package ir.mhe47880.onlineshopapp.ui.screens
 
 import androidx.compose.runtime.Composable
 
