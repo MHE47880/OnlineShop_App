@@ -21,7 +21,7 @@ import ir.mhe47880.onlineshopapp.ui.theme.LocalExtendedColors
 
 @Composable
 fun GradientButton(
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
     buttonText: String,
     textStyle: TextStyle = MaterialTheme.typography.labelLarge,
     gradientColors: List<Color> = listOf(

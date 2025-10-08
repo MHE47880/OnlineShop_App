@@ -4,6 +4,10 @@
     <string name="online_shop">OnlineShop</string>
     <string name="email_registration_text">جهت ورود به فروشگاه اینترنتی آنلاین شاپ ایمیل خود را در کادر زیر وارد کرده و کد ارسالی به ایمیل خود را در مرحله بعد وارد کنید.</string>
     <string name="email">ایمیل :</string>
-    <string name="place_holder">ایمیل خود را وارد کنید</string>
+    <string name="place_holder_email">ایمیل خود را وارد کنید</string>
     <string name="accept">تائید و ادامه</string>
+    <string name="code">کد تائید :</string>
+    <string name="verify_text_1"> کد تائید ارسال شده به</string>
+    <string name="verify_text_2"> را وارد کنید</string>
+    <string name="place_holder_code">کد تائید را وارد کنید</string>
 </resources>

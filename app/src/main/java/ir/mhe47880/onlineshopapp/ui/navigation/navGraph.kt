@@ -23,7 +23,7 @@ fun SetupNavigation() {
         composable<Screens.SplashScreen> { SplashScreen() }
 
         navigation<Screens.EmailRegistration>(
-            startDestination = Screens.GetEmail
+            startDestination = Screens.VerifyEmail
         ){
 
             composable<Screens.GetEmail> { GetEmailScreen() }
