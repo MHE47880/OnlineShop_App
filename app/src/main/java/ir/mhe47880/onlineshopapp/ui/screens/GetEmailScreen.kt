@@ -35,7 +35,7 @@ import ir.mhe47880.onlineshopapp.ui.components.GradientButton
 import ir.mhe47880.onlineshopapp.ui.components.Logo
 import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
-import ir.mhe47880.onlineshopapp.ui.theme.iran_rounded
+import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 
 @Composable
 fun GetEmailScreen() {
@@ -75,7 +75,7 @@ fun GetEmailScreen() {
                 style = TextStyle(
                     color = Black,
                     textDirection = TextDirection.Rtl,
-                    fontFamily = iran_rounded,
+                    fontFamily = hamisheh,
                     fontWeight = FontWeight.Normal,
                     fontSize = 18.sp
                 )
@@ -106,7 +106,7 @@ fun GetEmailScreen() {
                         style = TextStyle(
                             color = Gray,
                             textDirection = TextDirection.Rtl,
-                            fontFamily = iran_rounded,
+                            fontFamily = hamisheh,
                             fontWeight = FontWeight.Normal,
                             fontSize = 14.sp
                         )

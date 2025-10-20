@@ -8,7 +8,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.sp
 import ir.mhe47880.onlineshopapp.ui.theme.Black
-import ir.mhe47880.onlineshopapp.ui.theme.iran_rounded
+import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 
 @Composable
 fun BoldTextFieldHeader(
@@ -17,7 +17,7 @@ fun BoldTextFieldHeader(
     style: TextStyle = TextStyle(
         color = Black,
         textDirection = TextDirection.Rtl,
-        fontFamily = iran_rounded,
+        fontFamily = hamisheh,
         fontWeight = FontWeight.Bold,
         fontSize = 24.sp
     )

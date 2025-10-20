@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.navigation.compose)
     implementation(libs.kotlin.serialization)
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
     ksp(libs.hilt.compiler)

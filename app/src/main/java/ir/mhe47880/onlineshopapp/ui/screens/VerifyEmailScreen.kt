@@ -6,7 +6,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -36,15 +35,15 @@ import ir.mhe47880.onlineshopapp.ui.components.BoldTextFieldHeader
 import ir.mhe47880.onlineshopapp.ui.components.CustomTextField
 import ir.mhe47880.onlineshopapp.ui.components.GradientButton
 import ir.mhe47880.onlineshopapp.ui.components.Logo
+import ir.mhe47880.onlineshopapp.ui.components.countdowntimer.CountDownTimer
 import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Creamy
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
-import ir.mhe47880.onlineshopapp.ui.theme.iran_rounded
+import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 
 @Composable
 fun VerifyEmailScreen() {
 
-    //todo
     val focus = LocalFocusManager.current
 
     Box(
@@ -91,7 +90,7 @@ fun VerifyEmailScreen() {
                 style = TextStyle(
                     color = Black,
                     textDirection = TextDirection.Rtl,
-                    fontFamily = iran_rounded,
+                    fontFamily = hamisheh,
                     fontWeight = FontWeight.Normal,
                     fontSize = 18.sp
                 )
@@ -114,25 +113,29 @@ fun VerifyEmailScreen() {
                         style = TextStyle(
                             color = Gray,
                             textDirection = TextDirection.Rtl,
-                            fontFamily = iran_rounded,
+                            fontFamily = hamisheh,
                             fontWeight = FontWeight.Normal,
                             fontSize = 14.sp
                         )
                     )
                 },
                 leadingIcon = {
-                    Row(
+                    Box(
                         modifier = Modifier
                             .padding(8.dp)
                             .clip(RoundedCornerShape(12.dp))
                             .fillMaxHeight()
                             .width(70.dp)
                             .background(Creamy),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically
+                        contentAlignment = Alignment.Center
                     ) {
 
-                            //Todo timer
+                        CountDownTimer(
+                            minutes = 2,
+                            onFinished = {
+                                //todo
+                            }
+                        )
 
                     }
                 }
