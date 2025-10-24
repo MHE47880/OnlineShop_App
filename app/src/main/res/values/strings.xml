@@ -10,4 +10,7 @@
     <string name="verify_text_1"> کد تائید ارسال شده به</string>
     <string name="verify_text_2"> را وارد کنید</string>
     <string name="place_holder_code">کد تائید را وارد کنید</string>
+    <string name="profile_information">اطلاعات کاربری :</string>
+    <string name="place_holder_profile_information">نام و نام خانوادگی خود را وارد کنید</string>
+    <string name="register_information">ثبت اطلاعات</string>
 </resources>

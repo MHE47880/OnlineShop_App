@@ -7,13 +7,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -35,16 +33,11 @@ import ir.mhe47880.onlineshopapp.ui.components.BoldTextFieldHeader
 import ir.mhe47880.onlineshopapp.ui.components.CustomTextField
 import ir.mhe47880.onlineshopapp.ui.components.GradientButton
 import ir.mhe47880.onlineshopapp.ui.components.Logo
-import ir.mhe47880.onlineshopapp.ui.components.countdowntimer.CountDownTimer
-import ir.mhe47880.onlineshopapp.ui.theme.Black
-import ir.mhe47880.onlineshopapp.ui.theme.Creamy
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 
 @Composable
-fun VerifyEmailScreen() {
-
-    //todo
+fun GetProfileInformation() {
 
     val focus = LocalFocusManager.current
 
@@ -77,25 +70,7 @@ fun VerifyEmailScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 24.dp),
-                text = stringResource(R.string.code)
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            Text(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 24.dp),
-                //todo add real email between texts
-                text = stringResource(R.string.verify_text_1) +
-                        stringResource(R.string.verify_text_2),
-                style = TextStyle(
-                    color = Black,
-                    textDirection = TextDirection.Rtl,
-                    fontFamily = hamisheh,
-                    fontWeight = FontWeight.Normal,
-                    fontSize = 18.sp
-                )
+                text = stringResource(R.string.profile_information)
             )
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -111,7 +86,7 @@ fun VerifyEmailScreen() {
                 placeholder = {
                     Text(
                         modifier = Modifier.fillMaxWidth(),
-                        text = stringResource(R.string.place_holder_code),
+                        text = stringResource(R.string.place_holder_profile_information),
                         style = TextStyle(
                             color = Gray,
                             textDirection = TextDirection.Rtl,
@@ -120,26 +95,6 @@ fun VerifyEmailScreen() {
                             fontSize = 14.sp
                         )
                     )
-                },
-                leadingIcon = {
-                    Box(
-                        modifier = Modifier
-                            .padding(8.dp)
-                            .clip(RoundedCornerShape(12.dp))
-                            .fillMaxHeight()
-                            .width(70.dp)
-                            .background(Creamy),
-                        contentAlignment = Alignment.Center
-                    ) {
-
-                        CountDownTimer(
-                            minutes = 2,
-                            onFinished = {
-                                //todo
-                            }
-                        )
-
-                    }
                 }
             )
 
@@ -151,7 +106,7 @@ fun VerifyEmailScreen() {
                     .fillMaxWidth()
                     .height(55.dp)
                     .padding(horizontal = 24.dp),
-                buttonText = stringResource(R.string.accept),
+                buttonText = stringResource(R.string.register_information),
                 onClick = { /*todo*/ }
             )
 

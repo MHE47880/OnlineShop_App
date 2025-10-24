@@ -8,7 +8,7 @@ sealed interface Screens {
     @Serializable
     data object SplashScreen : Screens
 
-    //region Email registration & verify
+    //region Registration & Verify
     @Serializable
     data object EmailRegistration : Screens
 
@@ -17,6 +17,9 @@ sealed interface Screens {
 
     @Serializable
     data object VerifyEmail : Screens
+
+    @Serializable
+    data object GetProfileInformation : Screens
     //endregion
 
 }
