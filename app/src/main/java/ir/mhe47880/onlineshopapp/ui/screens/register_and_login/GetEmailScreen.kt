@@ -1,4 +1,4 @@
-package ir.mhe47880.onlineshopapp.ui.screens
+package ir.mhe47880.onlineshopapp.ui.screens.register_and_login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

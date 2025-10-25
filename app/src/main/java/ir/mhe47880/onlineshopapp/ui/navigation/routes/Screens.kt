@@ -22,4 +22,7 @@ sealed interface Screens {
     data object GetProfileInformation : Screens
     //endregion
 
+    @Serializable
+    data object MainScreen : Screens
+
 }

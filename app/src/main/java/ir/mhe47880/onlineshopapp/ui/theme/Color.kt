@@ -14,6 +14,8 @@ val Light_Red = Color(0xFFFE593E)
 
 val Dark_Red = Color(0xFFE02508)
 
+val Orange = Color(0xFFEF472C)
+
 data class ExtendedColors(
     val gradientStart: Color,
     val gradientEnd: Color

@@ -13,4 +13,8 @@
     <string name="profile_information">اطلاعات کاربری :</string>
     <string name="place_holder_profile_information">نام و نام خانوادگی خود را وارد کنید</string>
     <string name="register_information">ثبت اطلاعات</string>
+    <string name="home">خانه</string>
+    <string name="categories">دسته بندی</string>
+    <string name="shopping_cart">سبد خرید</string>
+    <string name="profile">پروفایل من</string>
 </resources>
