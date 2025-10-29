@@ -111,12 +111,11 @@ fun GetProfileInformation(navController: NavHostController) {
                 buttonText = stringResource(R.string.register_information),
                 onClick = {
                     /*todo*/
-                    navController.navigate(Screens.MainScreen){
-                        popUpTo(Screens.GetProfileInformation){
+                    navController.navigate(Screens.MainScreen) {
+                        popUpTo(Screens.GetProfileInformation) {
                             inclusive = true
                         }
                         launchSingleTop = true
-                        restoreState = true
                     }
                 }
             )

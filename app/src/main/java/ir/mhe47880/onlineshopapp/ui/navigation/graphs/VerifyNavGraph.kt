@@ -13,7 +13,7 @@ import ir.mhe47880.onlineshopapp.ui.screens.SplashScreen
 import ir.mhe47880.onlineshopapp.ui.screens.register_and_login.VerifyEmailScreen
 
 @Composable
-fun SetupNavigation() {
+fun VerifyNavGraph() {
 
     val navController = rememberNavController()
 

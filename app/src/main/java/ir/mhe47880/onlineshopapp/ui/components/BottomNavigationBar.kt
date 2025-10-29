@@ -91,11 +91,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                         onClick = {
                             if (!isSelected) {
                                 navController.navigate(screen) {
-                                    popUpTo(navController.graph.startDestinationId) {
-                                        inclusive = false
-                                    }
                                     launchSingleTop = true
-                                    restoreState = true
                                 }
                             }
                         }

@@ -22,7 +22,7 @@ sealed class BottomNavScreens(
     @Serializable
     data object Profile : BottomNavScreens(
         faNameAddress = R.string.profile,
-        icon = R.drawable.ic_profile
+        icon = R.drawable.ic_user_octagon
     )
 
     @Serializable
