@@ -41,6 +41,8 @@ fun MainNavGraph() {
         }
     ) { innerPadding ->
 
+        BackgroundTexture(paddingValues = innerPadding)
+
         NavHost(
             navController = navController,
             startDestination = BottomNavScreens.Home
@@ -52,8 +54,6 @@ fun MainNavGraph() {
             composable<BottomNavScreens.Profile> { ProfileScreen(paddingValues = innerPadding) }
 
         }
-
-        BackgroundTexture(paddingValues = innerPadding)
 
     }
 
