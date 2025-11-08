@@ -4,6 +4,8 @@ import androidx.compose.ui.graphics.Color
 
 val White = Color(0xFFFFFFFF)
 
+val Light_Creamy = Color(0xFFFCF3EC)
+
 val Creamy = Color(0xFFFCF3EC)
 
 val Black = Color(0xFF000000)

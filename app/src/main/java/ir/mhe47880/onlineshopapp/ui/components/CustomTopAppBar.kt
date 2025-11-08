@@ -49,7 +49,7 @@ fun CustomTopAppBar(navController: NavController) {
                 }
             ) {
                 Icon(
-                    painter = painterResource(R.drawable.ic_arrow_left),
+                    painter = painterResource(R.drawable.ic_arrow_back_left),
                     contentDescription = null
                 )
             }
