@@ -29,9 +29,9 @@ fun CustomTextField(
         errorIndicatorColor = Color.Transparent
     ),
     textStyle : TextStyle,
-
-    placeholder : @Composable (() -> Unit),
-    leadingIcon: @Composable (() -> Unit) = {},
+    placeholder : @Composable (() -> Unit)? = null,
+    leadingIcon: @Composable (() -> Unit)? = null,
+    trailingIcon: @Composable (() -> Unit)? = null,
     onValueChange: (String) -> Unit
 ) {
     TextField(
@@ -43,6 +43,7 @@ fun CustomTextField(
         colors = colors,
         textStyle = textStyle,
         placeholder = placeholder,
-        leadingIcon = leadingIcon
+        leadingIcon = leadingIcon,
+        trailingIcon = trailingIcon
     )
 }
