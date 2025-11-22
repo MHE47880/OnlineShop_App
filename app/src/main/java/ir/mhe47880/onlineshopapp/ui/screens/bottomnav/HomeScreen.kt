@@ -20,6 +20,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
@@ -123,13 +124,13 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
             }
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
         LazyRow(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(end = 24.dp),
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(horizontal = 24.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
             reverseLayout = true
             ) {
 
@@ -138,7 +139,6 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                     modifier = Modifier.size(width = 100.dp, height = 130.dp),
                     image = painterResource(R.drawable.logo)
                 )
-                
             }
 
         }
