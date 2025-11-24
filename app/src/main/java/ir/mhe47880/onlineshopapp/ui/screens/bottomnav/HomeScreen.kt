@@ -3,8 +3,10 @@ package ir.mhe47880.onlineshopapp.ui.screens.bottomnav
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,13 +24,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDirection
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ir.mhe47880.onlineshopapp.R
@@ -36,20 +39,18 @@ import ir.mhe47880.onlineshopapp.ui.components.Banner
 import ir.mhe47880.onlineshopapp.ui.components.CategoryCard
 import ir.mhe47880.onlineshopapp.ui.components.CustomTextField
 import ir.mhe47880.onlineshopapp.ui.theme.Black
+import ir.mhe47880.onlineshopapp.ui.theme.Coal
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 import ir.mhe47880.onlineshopapp.ui.theme.Orange
 import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 import ir.mhe47880.onlineshopapp.ui.utils.DoubleBackToExit
 
-@Preview(
-    showBackground = true,
-    showSystemUi = true
-)
 @Composable
 fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
 
     val focus = LocalFocusManager.current
 
+    //double back click to exit
     DoubleBackToExit()
 
     Column(
@@ -74,6 +75,7 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
             onPreviousButtonClick = { /*TODO*/ }
         )
 
+        //text field header
         Text(
             modifier = Modifier
                 .fillMaxWidth()
@@ -126,13 +128,14 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        //categories
         LazyRow(
             modifier = Modifier.fillMaxWidth(),
             contentPadding = PaddingValues(horizontal = 24.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically,
             reverseLayout = true
-            ) {
+        ) {
 
             items(count = 10) {
                 CategoryCard(
@@ -141,6 +144,61 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                 )
             }
 
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+            Row(
+                modifier = Modifier.clickable(
+                    onClick = { /*TODO*/ }
+                ),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+
+                Icon(
+                    modifier = Modifier
+                        .scale(1.3f)
+                        .padding(end = 6.dp),
+                    painter = painterResource(R.drawable.ic_two_part_arrow_left),
+                    contentDescription = "see_all",
+                    tint = Color.Unspecified
+                )
+
+                Text(
+                    text = stringResource(R.string.see_all),
+                    style = TextStyle(
+                        color = Coal,
+                        textDirection = TextDirection.Rtl,
+                        fontFamily = hamisheh,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp
+                    )
+                )
+
+            }
+
+            Box(
+                modifier = Modifier.fillMaxWidth(),
+                contentAlignment = Alignment.CenterEnd
+            ) {
+                Text(
+                    text = stringResource(R.string.best_selling),
+                    style = TextStyle(
+                        color = Black,
+                        textDirection = TextDirection.Rtl,
+                        fontFamily = hamisheh,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                )
+            }
         }
 
     }

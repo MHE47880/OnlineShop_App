@@ -19,4 +19,6 @@
     <string name="profile">پروفایل من</string>
     <string name="discount">تخفیف ویژه</string>
     <string name="buy_with_one_click">تنها با یک کلیک خرید کن!</string>
+    <string name="best_selling">پر فروش ترین ها</string>
+    <string name="see_all">مشاهده همه</string>
 </resources>
