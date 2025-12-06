@@ -34,7 +34,7 @@ import ir.mhe47880.onlineshopapp.ui.navigation.routes.BottomNavScreens
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 import ir.mhe47880.onlineshopapp.ui.theme.Orange
 import ir.mhe47880.onlineshopapp.ui.theme.White
-import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
+import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
@@ -105,7 +105,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                         style = TextStyle(
                             color = if (isSelected) Orange else Gray,
                             fontSize = 12.sp,
-                            fontFamily = hamisheh,
+                            fontFamily = iranSans,
                             fontWeight = FontWeight.Bold
                         ),
                         maxLines = 1

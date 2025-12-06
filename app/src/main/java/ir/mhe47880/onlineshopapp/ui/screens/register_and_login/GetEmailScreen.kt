@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -33,7 +34,7 @@ import ir.mhe47880.onlineshopapp.ui.components.GradientButton
 import ir.mhe47880.onlineshopapp.ui.components.Logo
 import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
-import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
+import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 
 @Composable
 fun GetEmailScreen() {
@@ -72,7 +73,7 @@ fun GetEmailScreen() {
                 style = TextStyle(
                     color = Black,
                     textDirection = TextDirection.Rtl,
-                    fontFamily = hamisheh,
+                    fontFamily = iranSans,
                     fontWeight = FontWeight.Normal,
                     fontSize = 18.sp
                 )
@@ -100,13 +101,8 @@ fun GetEmailScreen() {
                     Text(
                         modifier = Modifier.fillMaxWidth(),
                         text = stringResource(R.string.place_holder_email),
-                        style = TextStyle(
-                            color = Gray,
-                            textDirection = TextDirection.Rtl,
-                            fontFamily = hamisheh,
-                            fontWeight = FontWeight.Normal,
-                            fontSize = 14.sp
-                        )
+                        color = Gray,
+                        style = MaterialTheme.typography.displayMedium
                     )
                 }
             )

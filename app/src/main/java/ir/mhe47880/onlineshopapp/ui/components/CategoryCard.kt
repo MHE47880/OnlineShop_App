@@ -25,7 +25,7 @@ fun CategoryCard(
     modifier: Modifier = Modifier,
     shape: Shape = RoundedCornerShape(12.dp),
     image: Painter,
-    textStyle: TextStyle = MaterialTheme.typography.labelSmall,
+    textStyle: TextStyle = MaterialTheme.typography.displayMedium,
     onClick: () -> Unit = {}
 ) {
 

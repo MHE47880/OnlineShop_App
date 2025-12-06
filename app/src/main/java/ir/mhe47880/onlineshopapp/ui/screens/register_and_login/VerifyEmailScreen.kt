@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -38,7 +39,7 @@ import ir.mhe47880.onlineshopapp.ui.components.countdowntimer.CountDownTimer
 import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Creamy
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
-import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
+import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 
 @Composable
 fun VerifyEmailScreen() {
@@ -90,7 +91,7 @@ fun VerifyEmailScreen() {
                 style = TextStyle(
                     color = Black,
                     textDirection = TextDirection.Rtl,
-                    fontFamily = hamisheh,
+                    fontFamily = iranSans,
                     fontWeight = FontWeight.Normal,
                     fontSize = 18.sp
                 )
@@ -110,13 +111,8 @@ fun VerifyEmailScreen() {
                     Text(
                         modifier = Modifier.fillMaxWidth(),
                         text = stringResource(R.string.place_holder_code),
-                        style = TextStyle(
-                            color = Gray,
-                            textDirection = TextDirection.Rtl,
-                            fontFamily = hamisheh,
-                            fontWeight = FontWeight.Normal,
-                            fontSize = 14.sp
-                        )
+                        color = Gray,
+                        style = MaterialTheme.typography.displayMedium
                     )
                 },
                 leadingIcon = {

@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -21,10 +22,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import ir.mhe47880.onlineshopapp.R
 import ir.mhe47880.onlineshopapp.ui.components.BackgroundTexture
@@ -34,10 +33,9 @@ import ir.mhe47880.onlineshopapp.ui.components.GradientButton
 import ir.mhe47880.onlineshopapp.ui.components.Logo
 import ir.mhe47880.onlineshopapp.ui.navigation.routes.Screens
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
-import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
 
 @Composable
-fun GetProfileInformation(navController: NavHostController) {
+fun GetProfileInformationScreen(navController: NavHostController) {
 
     val focus = LocalFocusManager.current
 
@@ -86,13 +84,8 @@ fun GetProfileInformation(navController: NavHostController) {
                     Text(
                         modifier = Modifier.fillMaxWidth(),
                         text = stringResource(R.string.place_holder_profile_information),
-                        style = TextStyle(
-                            color = Gray,
-                            textDirection = TextDirection.Rtl,
-                            fontFamily = hamisheh,
-                            fontWeight = FontWeight.Normal,
-                            fontSize = 14.sp
-                        )
+                        color = Gray,
+                        style = MaterialTheme.typography.displayMedium
                     )
                 }
             )

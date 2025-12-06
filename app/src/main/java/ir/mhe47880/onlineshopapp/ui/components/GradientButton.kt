@@ -18,12 +18,14 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import ir.mhe47880.onlineshopapp.ui.theme.LocalExtendedColors
+import ir.mhe47880.onlineshopapp.ui.theme.White
 
 @Composable
 fun GradientButton(
     modifier: Modifier,
     buttonText: String,
-    textStyle: TextStyle = MaterialTheme.typography.labelLarge,
+    textStyle: TextStyle = MaterialTheme.typography.displayLarge,
+    textColor: Color = White,
     gradientColors: List<Color> = listOf(
         LocalExtendedColors.current.gradientStart,
         LocalExtendedColors.current.gradientEnd
@@ -44,13 +46,14 @@ fun GradientButton(
             modifier = Modifier
                 .fillMaxSize()
                 .background(
-                    brush = Brush.linearGradient(gradientColors),
+                    brush = Brush.horizontalGradient(gradientColors),
                     shape = buttonShape
                 ),
             contentAlignment = Alignment.Center
         ) {
             Text(
                 text = buttonText,
+                color = textColor,
                 style = textStyle
             )
         }

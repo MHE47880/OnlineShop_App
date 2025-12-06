@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -38,11 +39,12 @@ import ir.mhe47880.onlineshopapp.R
 import ir.mhe47880.onlineshopapp.ui.components.Banner
 import ir.mhe47880.onlineshopapp.ui.components.CategoryCard
 import ir.mhe47880.onlineshopapp.ui.components.CustomTextField
+import ir.mhe47880.onlineshopapp.ui.components.productcard.ProductCard
 import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Coal
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 import ir.mhe47880.onlineshopapp.ui.theme.Orange
-import ir.mhe47880.onlineshopapp.ui.theme.hamisheh
+import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 import ir.mhe47880.onlineshopapp.ui.utils.DoubleBackToExit
 
 @Composable
@@ -84,7 +86,7 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
             style = TextStyle(
                 color = Black,
                 textDirection = TextDirection.Rtl,
-                fontFamily = hamisheh,
+                fontFamily = iranSans,
                 fontWeight = FontWeight.Bold,
                 fontSize = 24.sp
             )
@@ -105,13 +107,8 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = "هر چی میخوای جستجو کن ...",
-                    style = TextStyle(
-                        color = Gray,
-                        textDirection = TextDirection.Rtl,
-                        fontFamily = hamisheh,
-                        fontWeight = FontWeight.Normal,
-                        fontSize = 14.sp
-                    )
+                    color = Gray,
+                    style = MaterialTheme.typography.displayMedium
                 )
             },
             trailingIcon = {
@@ -156,9 +153,12 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
         ) {
 
             Row(
-                modifier = Modifier.clickable(
-                    onClick = { /*TODO*/ }
-                ),
+                modifier = Modifier
+                    .clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null,
+                        onClick = { /*TODO*/ }
+                    ),
                 verticalAlignment = Alignment.CenterVertically
             ) {
 
@@ -176,7 +176,7 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                     style = TextStyle(
                         color = Coal,
                         textDirection = TextDirection.Rtl,
-                        fontFamily = hamisheh,
+                        fontFamily = iranSans,
                         fontWeight = FontWeight.Bold,
                         fontSize = 13.sp
                     )
@@ -193,13 +193,39 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                     style = TextStyle(
                         color = Black,
                         textDirection = TextDirection.Rtl,
-                        fontFamily = hamisheh,
+                        fontFamily = iranSans,
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp
                     )
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        LazyRow(
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(horizontal = 24.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            reverseLayout = true
+        ) {
+
+            items(10) {
+                ProductCard(
+                    modifier = Modifier
+                        .width(220.dp)
+                        .height(300.dp),
+                    image = painterResource(R.drawable.shirt),
+                    isDiscounted = true,
+                    discountInPercentage = 10
+                )
+            }
+            /*TODO Fix Material font in project */
+
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
     }
 
