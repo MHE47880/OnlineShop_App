@@ -31,20 +31,17 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import ir.mhe47880.onlineshopapp.R
 import ir.mhe47880.onlineshopapp.ui.components.Banner
+import ir.mhe47880.onlineshopapp.ui.components.BoldHeaderText
 import ir.mhe47880.onlineshopapp.ui.components.CategoryCard
 import ir.mhe47880.onlineshopapp.ui.components.CustomTextField
 import ir.mhe47880.onlineshopapp.ui.components.productcard.ProductCard
-import ir.mhe47880.onlineshopapp.ui.theme.Black
 import ir.mhe47880.onlineshopapp.ui.theme.Coal
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 import ir.mhe47880.onlineshopapp.ui.theme.Orange
-import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 import ir.mhe47880.onlineshopapp.ui.utils.DoubleBackToExit
 
 @Composable
@@ -78,18 +75,11 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
         )
 
         //text field header
-        Text(
+        BoldHeaderText(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 24.dp),
-            text = stringResource(R.string.buy_with_one_click),
-            style = TextStyle(
-                color = Black,
-                textDirection = TextDirection.Rtl,
-                fontFamily = iranSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 24.sp
-            )
+            text = stringResource(R.string.buy_with_one_click)
         )
 
         Spacer(modifier = Modifier.height(12.dp))
@@ -173,13 +163,8 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
 
                 Text(
                     text = stringResource(R.string.see_all),
-                    style = TextStyle(
-                        color = Coal,
-                        textDirection = TextDirection.Rtl,
-                        fontFamily = iranSans,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp
-                    )
+                    color = Coal,
+                    style = MaterialTheme.typography.titleSmall
                 )
 
             }
@@ -190,13 +175,7 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
             ) {
                 Text(
                     text = stringResource(R.string.best_selling),
-                    style = TextStyle(
-                        color = Black,
-                        textDirection = TextDirection.Rtl,
-                        fontFamily = iranSans,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 18.sp
-                    )
+                    style = MaterialTheme.typography.titleMedium
                 )
             }
         }
@@ -221,7 +200,6 @@ fun HomeScreen(paddingValues: PaddingValues = PaddingValues()) {
                     discountInPercentage = 10
                 )
             }
-            /*TODO Fix Material font in project */
 
         }
 

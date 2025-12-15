@@ -98,7 +98,7 @@ fun Banner(
             modifier = Modifier
                 .clip(RoundedCornerShape(percent = 50))
                 .background(
-                    Brush.linearGradient(
+                    Brush.horizontalGradient(
                         colors = listOf(
                             LocalExtendedColors.current.gradientStart,
                             LocalExtendedColors.current.gradientEnd

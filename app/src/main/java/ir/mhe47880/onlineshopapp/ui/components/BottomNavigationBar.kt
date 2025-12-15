@@ -39,6 +39,8 @@ import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
 
+    //TODO this function has some bugs - need to refactor
+
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
 
     Row(

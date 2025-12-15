@@ -35,7 +35,7 @@ import ir.mhe47880.onlineshopapp.ui.navigation.routes.Screens
 import ir.mhe47880.onlineshopapp.ui.theme.Gray
 
 @Composable
-fun GetProfileInformationScreen(navController: NavHostController) {
+fun GetProfileInformation(navController: NavHostController) {
 
     val focus = LocalFocusManager.current
 

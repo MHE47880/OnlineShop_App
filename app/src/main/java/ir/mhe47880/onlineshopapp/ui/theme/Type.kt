@@ -82,27 +82,30 @@ val Typography = Typography(
         fontWeight = FontWeight.SemiBold,
         textDirection = TextDirection.Rtl
     ),
+    //used for buy with one click text in home screen
     titleLarge = TextStyle(
         color = Black,
-        fontSize = 14.sp,
+        fontSize = 24.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.sp,
         fontFamily = iranSans,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         textDirection = TextDirection.Rtl
     ),
+    //used for most selling text in home screen
     titleMedium = TextStyle(
         color = Black,
-        fontSize = 13.sp,
+        fontSize = 18.sp,
         lineHeight = 18.sp,
         letterSpacing = 0.sp,
         fontFamily = iranSans,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         textDirection = TextDirection.Rtl
     ),
+    //used for see all text in home screen
     titleSmall = TextStyle(
         color = Black,
-        fontSize = 12.sp,
+        fontSize = 13.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.sp,
         fontFamily = iranSans,
