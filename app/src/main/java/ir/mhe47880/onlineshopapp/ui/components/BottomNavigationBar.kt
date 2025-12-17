@@ -6,11 +6,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,14 +37,15 @@ import ir.mhe47880.onlineshopapp.ui.theme.iranSans
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
 
-    //TODO this function has some bugs - need to refactor
-
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(75.dp)
+            .heightIn(
+                min = 56.dp,
+                max = 80.dp
+            )
             .background(White),
         horizontalArrangement = Arrangement.SpaceAround,
         verticalAlignment = Alignment.CenterVertically
@@ -59,28 +58,22 @@ fun BottomNavigationBar(navController: NavHostController) {
             Box(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .width(60.dp),
+                    .weight(1f),
                 contentAlignment = Alignment.Center
             ) {
 
                 if (isSelected) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.TopCenter
-                    ) {
-                        Surface(
-                            modifier = Modifier
-                                .padding(horizontal = 10.dp)
-                                .fillMaxWidth()
-                                .height(4.dp),
-                            shape = CircleShape,
-                            color = Orange
-                        ) {}
-                    }
+                    Surface(
+                        modifier = Modifier
+                            .align(Alignment.TopCenter)
+                            .fillMaxWidth(0.3f)
+                            .height(4.dp),
+                        shape = CircleShape,
+                        color = Orange
+                    ) {}
                 }
 
-                Column (
-                    modifier = Modifier.fillMaxSize(),
+                Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
@@ -90,6 +83,10 @@ fun BottomNavigationBar(navController: NavHostController) {
                             if (!isSelected) {
                                 navController.navigate(screen) {
                                     launchSingleTop = true
+                                    restoreState = true
+                                    popUpTo(navController.graph.startDestinationId) {
+                                        saveState = true
+                                    }
                                 }
                             }
                         }
@@ -110,7 +107,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                             fontFamily = iranSans,
                             fontWeight = FontWeight.Bold
                         ),
-                        maxLines = 1
+                        maxLines = 2
                     )
 
                 }
